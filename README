@@ -1,1 +1,4 @@
-This is a holder for an LED controller for the Raspberry Pi
+##Rainbow Bridge
+A simple Raspberry Pi controlled Neopixel device designed with a bridge over a pond in mind.
+
+Programmable by creating classes for each sequence that also provide HTML controls
