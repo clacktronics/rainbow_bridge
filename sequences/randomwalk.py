@@ -4,9 +4,12 @@ from time import sleep
 class pattern():
 	def __init__(self):
 		self.wait = False
-	
-	def sequence(self, neopixel, number, tstop):
+
+	def sequence(self, neopixel, tstop, number=10, speed=1):
 		self.wait = True
+
+		speed /= 1000.		
+
 		output = {}
 		sprites = [random.randint(1,128) for i in range(number)]
 		direction = [random.randrange(-1,2,2) for i in range(number)]
@@ -19,7 +22,7 @@ class pattern():
 				sprites[n] += direction[n]
 				neopixel.setPixelColor(sprite, *colors[n])
 			neopixel.show()
-			sleep(0.1)
+			sleep(speed)
 		neopixel.clear()
 		neopixel.show()
 		print 'end'

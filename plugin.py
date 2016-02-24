@@ -2,7 +2,7 @@ import imp, os
 from time import sleep
 
 SEQ_DIR = 'sequences'
-IGNORE = ['__init__.py', 'seq_temp.py','randomwalk2.py']
+IGNORE = ['__init__.py', 'seq_temp.py','master.py']
 
 
 class sequences():
