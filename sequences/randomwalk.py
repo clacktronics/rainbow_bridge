@@ -1,4 +1,5 @@
 import random, threading
+from time import sleep
 
 class pattern():
 	def __init__(self):
@@ -18,6 +19,7 @@ class pattern():
 				sprites[n] += direction[n]
 				neopixel.setPixelColor(sprite, *colors[n])
 			neopixel.show()
+			sleep(0.1)
 		neopixel.clear()
 		neopixel.show()
 		print 'end'
