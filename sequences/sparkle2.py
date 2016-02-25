@@ -5,7 +5,7 @@ class pattern():
 	def __init__(self):
 		self.wait = False
 	
-	def sequence(self, neopixel, tstop, speed=1,r=255,g=255,b=255,spread=0):
+	def sequence(self, neopixel, tstop, speed=1,r=255,g=255,b=255,spread=100):
 		
 		def map(x, in_min, in_max, out_min, out_max):
 			return int((x - in_min) * (out_max - out_min) / (in_max - in_min) + out_min)
