@@ -69,7 +69,7 @@ s = sequences()
 sequences = s.getSequences()
 
 ledstrip = NeoPixel.NeoPixel(129)
-server = HTTPServer(('',8080),LEDHandler)
+server = HTTPServer(('',80),LEDHandler)
 
 try: server.serve_forever()
 except KeyboardInterrupt:
