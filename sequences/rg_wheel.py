@@ -40,26 +40,17 @@ class pattern():
 		while not tstop.is_set():
 			for o in range(129):
 				neopixel.clear()
-				print "@"
 				for x in range(129): 
 					out = x + o
 					if out > 129: out = 258 - out
 					if out > 64: out = 129 - out
-
-					r = map(out,0,64,0,255)
-					r = gamma[b]
-
-					g = out + 43
-					if g > 64: g = 129 - g
-					g = map(g,0,64,0,255)
-					g = gamma[g]
-
-					b = out + 86 
-					if b > 43: b = 129 - b
-					b = map(b,0,64,0,255)
-					b = gamma[b]
-
-					neopixel.setPixelColor(x,r,g,b)
+					g = map(out,0,64,0,254)
+					g = gamma[b]
+					r = out + 64
+					if r > 64: r = 129 - r
+					r = map(r,0,64,0,254)
+					r = gamma[r]
+					neopixel.setPixelColor(x,r,g,0)
 				#sleep(.01)
 				neopixel.show()
 
